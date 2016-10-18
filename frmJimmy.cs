@@ -229,16 +229,16 @@ namespace Jimmy
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            
-            
+
+
+
             /**
             Random rand = new Random();
             int milliseconds = 2000;
             int chance = rand.Next(1, 26);
             string chancedisplay = chance.ToString();
             MessageBox.Show(chancedisplay + "%");
-            */
+            
             double CostofGoods = Convert.ToDouble(txtUserCost.Text);
 
             double taxes = Convert.ToDouble(txtUserTax.Text);
@@ -247,7 +247,7 @@ namespace Jimmy
 
             lblDisplay.Text = string.Format("{0,10}{1,15:C2}\n{2,10}{3,15:P}\n{4,10}{5,15:C2}",
             "Subtotal", CostofGoods, "Taxes", taxes, "Total", totalCost);
-
+    */
 
 
 
@@ -256,6 +256,48 @@ namespace Jimmy
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+        // Starting here is the line of code that is associated with the gifts that change and boost your stats
+        private void rbHpPotion_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbHpPotion.Checked)
+                lblGiftInfo.Text = " HP Potion made from the bronze teir alchemy guild Thra, in the village of Valdemar\nVITALITY +25";
+        }
+
+        private void rbMidasScroll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbMidasScroll.Checked)
+                lblGiftInfo.Text = " Said to have infinte amounts of knowledge stored within,able to decipher any code or spell as well as teach it\nINTELLIGENCE +4";
+        }
+
+        private void rb1upDoll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb1upDoll.Checked)
+                lblGiftInfo.Text = " The Nine present you with a doll filled with the light, albe to replaced a dead mans husk with life it self\n1UP";
+        }
+
+        private void rbHerculeArm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbHerculeArm.Checked)
+                lblGiftInfo.Text = " Take me and i will give thee strength insurmountable,O bearer mine\nSTRENGTH +3";
+        }
+
+        private void rbStyxOint_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbStyxOint.Checked)
+                lblGiftInfo.Text = " If you wish to claim water from the border of life and death, then quench your thirst and be harmed no further \nRESISTANCE +3";
+        }
+
+        private void OdyseusBranch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OdyseusBranch.Checked)
+                lblGiftInfo.Text = " I have lost my ghost,my mind not the same, picked apart endlessly and you will face the same fate .But there is still hope,i am alive,the branch is i and i the branch my crafts are yours my ally \nATTUNEMENT +4";
+        }
+
+        private void PosiedonTrydant_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PosiedonTrydant.Checked)
+                lblGiftInfo.Text = "  \nRESISTANCE +3";
         }
     }
 }

@@ -67,9 +67,11 @@
             this.PosiedonTrydant = new System.Windows.Forms.RadioButton();
             this.rbMedusaSkull = new System.Windows.Forms.RadioButton();
             this.rbOrpheusHrp = new System.Windows.Forms.RadioButton();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblGiftInfo = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.grbGifts = new System.Windows.Forms.GroupBox();
+            this.grbGifts.SuspendLayout();
             this.SuspendLayout();
             // 
             // Hello_button
@@ -122,11 +124,11 @@
             // Rules
             // 
             this.Rules.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rules.Location = new System.Drawing.Point(12, 164);
+            this.Rules.Location = new System.Drawing.Point(12, 234);
             this.Rules.Name = "Rules";
-            this.Rules.Size = new System.Drawing.Size(294, 292);
+            this.Rules.Size = new System.Drawing.Size(294, 328);
             this.Rules.TabIndex = 4;
-            this.Rules.Text = "Rules\r\n- When you start the dugeon go \r\nin order of instances";
+            this.Rules.Text = "Rules\r\n- When you start the dugeon go \r\nin order of instances\r\n(TUTORIAL)";
             this.Rules.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -318,62 +320,67 @@
             // rbHpPotion
             // 
             this.rbHpPotion.AutoSize = true;
-            this.rbHpPotion.Location = new System.Drawing.Point(618, 693);
+            this.rbHpPotion.Location = new System.Drawing.Point(21, 28);
             this.rbHpPotion.Name = "rbHpPotion";
             this.rbHpPotion.Size = new System.Drawing.Size(73, 17);
             this.rbHpPotion.TabIndex = 28;
             this.rbHpPotion.TabStop = true;
             this.rbHpPotion.Text = "HP Potion";
             this.rbHpPotion.UseVisualStyleBackColor = true;
+            this.rbHpPotion.CheckedChanged += new System.EventHandler(this.rbHpPotion_CheckedChanged);
             // 
             // rbMidasScroll
             // 
             this.rbMidasScroll.AutoSize = true;
-            this.rbMidasScroll.Location = new System.Drawing.Point(619, 724);
+            this.rbMidasScroll.Location = new System.Drawing.Point(21, 52);
             this.rbMidasScroll.Name = "rbMidasScroll";
             this.rbMidasScroll.Size = new System.Drawing.Size(106, 17);
             this.rbMidasScroll.TabIndex = 29;
             this.rbMidasScroll.TabStop = true;
             this.rbMidasScroll.Text = "King Midas Scroll";
             this.rbMidasScroll.UseVisualStyleBackColor = true;
+            this.rbMidasScroll.CheckedChanged += new System.EventHandler(this.rbMidasScroll_CheckedChanged);
             // 
             // rb1upDoll
             // 
             this.rb1upDoll.AutoSize = true;
-            this.rb1upDoll.Location = new System.Drawing.Point(618, 750);
+            this.rb1upDoll.Location = new System.Drawing.Point(21, 75);
             this.rb1upDoll.Name = "rb1upDoll";
             this.rb1upDoll.Size = new System.Drawing.Size(64, 17);
             this.rb1upDoll.TabIndex = 30;
             this.rb1upDoll.TabStop = true;
             this.rb1upDoll.Text = "1up Doll";
             this.rb1upDoll.UseVisualStyleBackColor = true;
+            this.rb1upDoll.CheckedChanged += new System.EventHandler(this.rb1upDoll_CheckedChanged);
             // 
             // rbHerculeArm
             // 
             this.rbHerculeArm.AutoSize = true;
-            this.rbHerculeArm.Location = new System.Drawing.Point(619, 778);
+            this.rbHerculeArm.Location = new System.Drawing.Point(21, 98);
             this.rbHerculeArm.Name = "rbHerculeArm";
             this.rbHerculeArm.Size = new System.Drawing.Size(116, 17);
             this.rbHerculeArm.TabIndex = 31;
             this.rbHerculeArm.TabStop = true;
             this.rbHerculeArm.Text = "Hercules Arm Band";
             this.rbHerculeArm.UseVisualStyleBackColor = true;
+            this.rbHerculeArm.CheckedChanged += new System.EventHandler(this.rbHerculeArm_CheckedChanged);
             // 
             // rbStyxOint
             // 
             this.rbStyxOint.AutoSize = true;
-            this.rbStyxOint.Location = new System.Drawing.Point(618, 804);
+            this.rbStyxOint.Location = new System.Drawing.Point(21, 123);
             this.rbStyxOint.Name = "rbStyxOint";
             this.rbStyxOint.Size = new System.Drawing.Size(90, 17);
             this.rbStyxOint.TabIndex = 32;
             this.rbStyxOint.TabStop = true;
             this.rbStyxOint.Text = "Styx Ointment";
             this.rbStyxOint.UseVisualStyleBackColor = true;
+            this.rbStyxOint.CheckedChanged += new System.EventHandler(this.rbStyxOint_CheckedChanged);
             // 
             // rbThesusCandle
             // 
             this.rbThesusCandle.AutoSize = true;
-            this.rbThesusCandle.Location = new System.Drawing.Point(618, 826);
+            this.rbThesusCandle.Location = new System.Drawing.Point(155, 123);
             this.rbThesusCandle.Name = "rbThesusCandle";
             this.rbThesusCandle.Size = new System.Drawing.Size(96, 17);
             this.rbThesusCandle.TabIndex = 33;
@@ -384,29 +391,31 @@
             // OdyseusBranch
             // 
             this.OdyseusBranch.AutoSize = true;
-            this.OdyseusBranch.Location = new System.Drawing.Point(618, 849);
+            this.OdyseusBranch.Location = new System.Drawing.Point(155, 28);
             this.OdyseusBranch.Name = "OdyseusBranch";
             this.OdyseusBranch.Size = new System.Drawing.Size(103, 17);
             this.OdyseusBranch.TabIndex = 34;
             this.OdyseusBranch.TabStop = true;
             this.OdyseusBranch.Text = "Odyseus Branch";
             this.OdyseusBranch.UseVisualStyleBackColor = true;
+            this.OdyseusBranch.CheckedChanged += new System.EventHandler(this.OdyseusBranch_CheckedChanged);
             // 
             // PosiedonTrydant
             // 
             this.PosiedonTrydant.AutoSize = true;
-            this.PosiedonTrydant.Location = new System.Drawing.Point(618, 872);
+            this.PosiedonTrydant.Location = new System.Drawing.Point(155, 52);
             this.PosiedonTrydant.Name = "PosiedonTrydant";
             this.PosiedonTrydant.Size = new System.Drawing.Size(103, 17);
             this.PosiedonTrydant.TabIndex = 35;
             this.PosiedonTrydant.TabStop = true;
             this.PosiedonTrydant.Text = "Posiedon Trdant";
             this.PosiedonTrydant.UseVisualStyleBackColor = true;
+            this.PosiedonTrydant.CheckedChanged += new System.EventHandler(this.PosiedonTrydant_CheckedChanged);
             // 
             // rbMedusaSkull
             // 
             this.rbMedusaSkull.AutoSize = true;
-            this.rbMedusaSkull.Location = new System.Drawing.Point(618, 895);
+            this.rbMedusaSkull.Location = new System.Drawing.Point(155, 75);
             this.rbMedusaSkull.Name = "rbMedusaSkull";
             this.rbMedusaSkull.Size = new System.Drawing.Size(89, 17);
             this.rbMedusaSkull.TabIndex = 36;
@@ -417,7 +426,7 @@
             // rbOrpheusHrp
             // 
             this.rbOrpheusHrp.AutoSize = true;
-            this.rbOrpheusHrp.Location = new System.Drawing.Point(618, 918);
+            this.rbOrpheusHrp.Location = new System.Drawing.Point(155, 98);
             this.rbOrpheusHrp.Name = "rbOrpheusHrp";
             this.rbOrpheusHrp.Size = new System.Drawing.Size(91, 17);
             this.rbOrpheusHrp.TabIndex = 37;
@@ -425,12 +434,12 @@
             this.rbOrpheusHrp.Text = "Orpheus Harp";
             this.rbOrpheusHrp.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // lblGiftInfo
             // 
-            this.label13.Location = new System.Drawing.Point(615, 947);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(197, 75);
-            this.label13.TabIndex = 38;
+            this.lblGiftInfo.Location = new System.Drawing.Point(6, 145);
+            this.lblGiftInfo.Name = "lblGiftInfo";
+            this.lblGiftInfo.Size = new System.Drawing.Size(375, 127);
+            this.lblGiftInfo.TabIndex = 38;
             // 
             // lblName
             // 
@@ -449,25 +458,35 @@
             this.textBox12.Size = new System.Drawing.Size(161, 20);
             this.textBox12.TabIndex = 39;
             // 
+            // grbGifts
+            // 
+            this.grbGifts.Controls.Add(this.rbHpPotion);
+            this.grbGifts.Controls.Add(this.rbMidasScroll);
+            this.grbGifts.Controls.Add(this.rb1upDoll);
+            this.grbGifts.Controls.Add(this.lblGiftInfo);
+            this.grbGifts.Controls.Add(this.rbHerculeArm);
+            this.grbGifts.Controls.Add(this.rbOrpheusHrp);
+            this.grbGifts.Controls.Add(this.rbStyxOint);
+            this.grbGifts.Controls.Add(this.rbMedusaSkull);
+            this.grbGifts.Controls.Add(this.rbThesusCandle);
+            this.grbGifts.Controls.Add(this.PosiedonTrydant);
+            this.grbGifts.Controls.Add(this.OdyseusBranch);
+            this.grbGifts.Location = new System.Drawing.Point(606, 681);
+            this.grbGifts.Name = "grbGifts";
+            this.grbGifts.Size = new System.Drawing.Size(387, 279);
+            this.grbGifts.TabIndex = 41;
+            this.grbGifts.TabStop = false;
+            this.grbGifts.Text = "Gifts";
+            // 
             // Jimmy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1185, 1044);
+            this.Controls.Add(this.grbGifts);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.rbOrpheusHrp);
-            this.Controls.Add(this.rbMedusaSkull);
-            this.Controls.Add(this.PosiedonTrydant);
-            this.Controls.Add(this.OdyseusBranch);
-            this.Controls.Add(this.rbThesusCandle);
-            this.Controls.Add(this.rbStyxOint);
-            this.Controls.Add(this.rbHerculeArm);
-            this.Controls.Add(this.rb1upDoll);
-            this.Controls.Add(this.rbMidasScroll);
-            this.Controls.Add(this.rbHpPotion);
             this.Controls.Add(this.lblGift);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.lblClass);
@@ -501,6 +520,8 @@
             this.Tag = "jimmy_lbl";
             this.Text = "Jimmy";
             this.Load += new System.EventHandler(this.Jimmy_Load);
+            this.grbGifts.ResumeLayout(false);
+            this.grbGifts.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,9 +567,10 @@
         private System.Windows.Forms.RadioButton PosiedonTrydant;
         private System.Windows.Forms.RadioButton rbMedusaSkull;
         private System.Windows.Forms.RadioButton rbOrpheusHrp;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblGiftInfo;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.GroupBox grbGifts;
     }
 }
 
